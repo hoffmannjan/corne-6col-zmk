@@ -1,13 +1,44 @@
-keymap {
-  compatible = "zmk,keymap";
+/ {
+  keymap {
+    compatible = "zmk,keymap";
 
-  base_layer {
-    bindings = <
-      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6
-      &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL
-      &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y
-      &kp A   &kp S   &kp D   &kp F   &kp G   &kp H
-      &trans  &trans  &kp SPACE  &kp ENTER  &trans  &trans
-    >;
+    layer_state: layer_state {
+      bindings = <&mo 1>, <&mo 2>, <&trans>, <&trans>, <&trans>;
+    };
+
+    layers {
+      base_layer {
+        bindings = <
+          &kp Q &kp W &kp E &kp R &kp T
+          &kp A &kp S &kp D &kp F &kp G
+          &kp Z &kp X &kp C &kp V &kp B
+          &kp TAB &kp ESC &kp LSHFT
+          &kp LGUI &kp BSPC &kp RET
+          &kp LALT
+        >;
+      };
+
+      lower_layer {
+        bindings = <
+          &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERC
+          &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
+          &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
+          &trans &trans &trans
+          &trans &trans &trans
+          &trans
+        >;
+      };
+
+      raise_layer {
+        bindings = <
+          &kp 1 &kp 2 &kp 3 &kp 4 &kp 5
+          &kp 6 &kp 7 &kp 8 &kp 9 &kp 0
+          &trans &trans &trans &trans &trans
+          &trans &trans &trans
+          &trans &trans &trans
+          &trans
+        >;
+      };
+    };
   };
 };
