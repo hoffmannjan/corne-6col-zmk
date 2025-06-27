@@ -2,29 +2,23 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-  keymap {
-    compatible = "zmk,keymap";
-
-    layout = [ "split_3x6_3" ];
-
-    base_layer {
-      bindings = <
-        &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y        &kp U     &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT
-        &kp A     &kp S     &kp D     &kp F     &kp G     &kp H        &kp J     &kp K     &kp L     &kp SEMI  &kp SQT   &kp BSPC
-        &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N        &kp M     &kp COMMA &kp DOT   &kp SLASH &kp RET   &kp ESC
-                              &kp LGUI  &mo LOWER &kp SPACE        &kp SPACE &kp RALT  &kp RCTRL
-      >;
-      label = "Base";
+    keymap {
+        compatible = "zmk,keymap";
+        base_layer {
+            bindings = <
+                &kp Q &kp W &kp E &kp R &kp T &kp Y
+                &kp A &kp S &kp D &kp F &kp G &kp H
+                &kp Z &kp X &kp C &kp V &kp B &kp N
+                &trans &mo LOWER &kp SPACE
+            >;
+        };
+        lower_layer {
+            bindings = <
+                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
+                &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5) &kp LS(N6)
+                &kp GRAVE &kp QMARK &kp EXCL &kp AT &kp HASH &kp DOLLAR
+                &trans &trans &trans
+            >;
+        };
     };
-
-    lower_layer {
-      bindings = <
-        &kp TAB   &kp N1         &kp N2         &kp N3         &kp N4         &kp N5         &trans &trans &trans &trans &trans &trans
-        &trans    &kp LS(N1)     &kp LS(N2)     &kp LS(N3)     &kp LS(N4)     &kp LS(N5)     &trans &trans &trans &trans &trans &trans
-        &kp GRAVE &kp QUESTION   &kp QMARK      &kp LBKT       &kp RBKT       &kp TILDE      &trans &trans &trans &trans &trans &trans
-                                  &trans        &trans         &kp BACKSPACE  &trans &trans &trans
-      >;
-      label = "Lower";
-    };
-  };
 };
