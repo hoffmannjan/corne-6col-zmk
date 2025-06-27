@@ -37,7 +37,7 @@
             display-name = "Lower";
             bindings = <
 &kp TAB    &kp A       &kp N2        &kp B       &kp C       &kp D               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&trans     &kp LS(N1)  &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&trans     &kp LS(N1)  &kp H         &kp J       &kp M       &kp X          &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
 &kp LSHFT  &kp GRAVE   &kp QUESTION  &kp QMARK   &kp LBKT    &kp LEFT_BRACKET    &trans    &trans    &trans    &trans     &trans  &trans
                                      &kp LGUI    &trans      &kp BACKSPACE       &kp RET   &trans    &kp RALT
             >;
