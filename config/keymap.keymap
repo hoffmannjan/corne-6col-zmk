@@ -18,7 +18,7 @@
         >;
       };
 
-      lower_layer {
+      raise_layer {
         bindings = <
           &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERC
           &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR
@@ -29,7 +29,7 @@
         >;
       };
 
-      raise_layer {
+      lower_layer {
         bindings = <
           &kp 1 &kp 2 &kp 3 &kp 4 &kp 5
           &kp 6 &kp 7 &kp 8 &kp 9 &kp 0
